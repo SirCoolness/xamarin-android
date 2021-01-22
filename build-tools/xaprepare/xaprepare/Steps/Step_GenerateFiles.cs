@@ -107,6 +107,7 @@ namespace Xamarin.Android.Prepare
 
 			var replacements = new Dictionary<string, string> (StringComparer.Ordinal) {
 				{ "@XA_PACKAGES_DIR@",                    Configurables.Paths.XAPackagesDir },
+				{ "@BundledNETCoreAppPackageVersion@",    context.BundledPreviewRuntimePackVersion },
 			};
 
 			return new GeneratedPlaceholdersFile (

@@ -378,6 +378,9 @@ namespace Xamarin.Android.Build.Tests
 				}
 			};
 			proj.MainActivity = proj.DefaultMainActivity.Replace (": Activity", ": AndroidX.AppCompat.App.AppCompatActivity");
+			//TODO: take this out and either make new tests or enable the AOT category
+			if (isRelease)
+				proj.SetProperty ("AotAssemblies", "true");
 			proj.OtherBuildItems.Add (new AndroidItem.InputJar ("javaclasses.jar") {
 				BinaryContent = () => ResourceData.JavaSourceJarTestJar,
 			});

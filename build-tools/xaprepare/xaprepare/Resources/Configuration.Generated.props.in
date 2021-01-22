@@ -3,5 +3,6 @@
   <PropertyGroup>
     <XAPackagesDir Condition=" '$(XAPackagesDir)' == '' And '$(NUGET_PACKAGES)' != '' ">$(NUGET_PACKAGES)</XAPackagesDir>
     <XAPackagesDir Condition=" '$(XAPackagesDir)' == '' ">@XA_PACKAGES_DIR@</XAPackagesDir>
+    <BundledNETCoreAppPackageVersion>@BundledNETCoreAppPackageVersion@</BundledNETCoreAppPackageVersion>
   </PropertyGroup>
 </Project>
